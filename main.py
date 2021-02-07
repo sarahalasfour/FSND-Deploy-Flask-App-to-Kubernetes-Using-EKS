@@ -1,3 +1,12 @@
+# export
+# TOKEN = `curl - d
+# '{"email":"sar_0nh@hotmail.com","password":"1234"}' - H
+# "Content-Type: application/json" - X
+# POST
+# localhost: 8080 / auth | jq - r
+# '.token'
+# `
+
 """
 A simple app to create a JWT token.
 """
@@ -79,7 +88,9 @@ def auth():
 
     user_data = body
 
-    return jsonify(token=_get_jwt(user_data).decode('utf-8'))
+    # return jsonify(token=_get_jwt(user_data).decode('utf-8'))
+    return jsonify(token=_get_jwt(user_data))
+
 
 
 @APP.route('/contents', methods=['GET'])
