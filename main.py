@@ -1,4 +1,3 @@
-# export TOKEN = `curl - d '{"email":"sar_0nh@hotmail.com","password":"1234"}' - H "Content-Type: application/json" - X POST localhost: 8080 / auth | jq - r '.token'`
 
 """
 A simple app to create a JWT token.
